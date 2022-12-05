@@ -29,3 +29,8 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   padding-top: 5em;
 }
+
+main {
+  width: 90%;
+  margin: auto;
+}
