@@ -43,7 +43,7 @@
     <!-- Header (banner) content here -->
     <header>
       <div>
-          <img src="/images/profile-hex.png"> 
+          <img src="/images/profile-hex.png" alt="Profile image"> 
       </div>
       <br>
       <div>
@@ -57,17 +57,17 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method="post" action="/tweets/" encytype="application/x-www-form-urlencoded">
-            <label for="tweet-text" hidden>What are you humming about?</label>
-            <textarea
+          <label for="tweet-text" hidden>What are you humming about?</label>
+          <textarea
             name="text"
             id="tweet-text"
             placeholder="What are you humming about?"
-            ></textarea>
-            
-            <div class="actions-and-info">
-              <button type="submit">Send Tweet</button>
-              <output name="counter" class="counter" for="tweet-text">140</output>
-            </div>
+          ></textarea>
+          
+          <div class="actions-and-info">
+            <button type="submit">Send Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
         </form>
       </section>
 
