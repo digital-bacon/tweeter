@@ -1,11 +1,16 @@
 $(document).ready(function() {
-  const tweetText = $('#tweet-text');
-  const tweetCounter = $('output.counter');
-  $(tweetText).on('keydown', function(event) {
+  const tweetTextInput = $('#tweet-text');
+  const tweetTextParent = $(tweetTextInput).parent();
+  const tweetCounter = $(tweetTextParent).find('.counter');
+  const maxTweetLength = 149;
+  $(tweetCounter).text(maxTweetLength);
+  $(tweetTextInput).on('keydown', function(event) {
     if (event.key === 'Enter') {
       event.preventDefault();
     }
-    const tweetLength = this.value.length;
-    $(tweetCounter).text(tweetLength);
+
+    const currentLength = this.value.length;
+    const counterValue = maxTweetLength - currentLength;
+    $(tweetCounter).text(counterValue);
   })
 });
