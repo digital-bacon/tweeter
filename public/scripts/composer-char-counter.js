@@ -12,5 +12,8 @@ $(document).ready(function() {
     const currentLength = this.value.length;
     const counterValue = maxTweetLength - currentLength;
     $(tweetCounter).text(counterValue);
+    if (counterValue < 0) {
+      $(tweetCounter).removeClass('danger').addClass('danger');
+    }
   })
 });
