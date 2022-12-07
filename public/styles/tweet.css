@@ -59,3 +59,12 @@ article.tweet footer .actions-and-info {
   letter-spacing: 0.2em;
   color: #4056A1;
 }
+
+article.tweet footer .actions-and-info a {
+  color: #4056A1;
+}
+
+article.tweet footer .actions-and-info a:hover,
+article.tweet footer .actions-and-info a:focus {
+  color: #e0753a;
+}
