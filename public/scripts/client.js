@@ -11,8 +11,36 @@ $(document).ready(function() {
       avatar: $('article.tweet header .user-image'),
     },
     content: {
-      text: $('article.tweet .content-text')
+      text: $('article.tweet .content-text'),
+    },
+    stats: {
+      tweetAge: $('article.tweet .tweet-age'),
+    },
+  }
+
+  const calculateDateDiff = (returnMeasurement, date1, date2) => {
+    const calculations = {
+      milliseconds: function() {
+        return date1 - date2;
+      },
+      seconds: function() {
+        return Math.floor(this.milliseconds() / 1000);
+      },
+      minutes: function() {
+        return Math.floor(this.seconds() / 60);
+      },
+      hours: function() {
+        return Math.floor(this.minutes() / 60);
+      },
+      days: function() {
+        return Math.floor(this.hours() / 24);
+      },
+      years: function() {
+        return Math.floor(this.days() / 365);
+      },
     }
+    const output = calculations[returnMeasurement.toLowerCase()]();
+    return output;
   }
 
   const createTweetElement  = (tweetObject) => {
@@ -23,6 +51,9 @@ $(document).ready(function() {
       'alt': `Profile image for ${tweetObject.user.name}`
     });
     $(tweetHTML.content.text).text(tweetObject.content.text);
+    const tweetAgeInDays = calculateDateDiff('days', Date.now(), new Date(tweetObject.created_at));
+    const ageOutput = tweetAgeInDays <= 1 ? 'Today' : `${tweetAgeInDays} days ago`;
+    $(tweetHTML.stats.tweetAge).text(ageOutput);
   }
 
   // Test / driver code (temporary). Eventually will get this from the server.
