@@ -1,5 +1,5 @@
 
-header {
+#user-banner {
   display: flex;
   flex-direction: column;
   height: 400px;
@@ -9,6 +9,6 @@ header {
   padding-top: 2em;
 }
 
-header h2 {
+#user-banner h2 {
   margin-top: 0;
 }
