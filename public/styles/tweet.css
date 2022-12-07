@@ -67,6 +67,7 @@ article.tweet footer .actions-and-info {
 
 article.tweet footer .actions-and-info a {
   color: #4056A1;
+  transition: color 0.25s ease;
 }
 
 article.tweet footer .actions-and-info a:hover,

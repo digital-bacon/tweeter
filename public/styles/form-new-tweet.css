@@ -41,6 +41,13 @@
   color: #FFFFFF;
   border: none;
   padding: 0.25em 0.5em;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.actions-and-info button:hover,
+.actions-and-info button:focus {
+  background-color: #e0753a;
 }
 
 .actions-and-info .counter {
