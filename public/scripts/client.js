@@ -9,6 +9,9 @@ $(document).ready(function() {
       name: $('article.tweet header .user-name'),
       handle: $('article.tweet header .user-handle'),
       avatar: $('article.tweet header .user-image'),
+    },
+    content: {
+      text: $('article.tweet .content-text')
     }
   }
 
@@ -19,6 +22,7 @@ $(document).ready(function() {
       'src': tweetObject.user.avatars,
       'alt': `Profile image for ${tweetObject.user.name}`
     });
+    $(tweetHTML.content.text).text(tweetObject.content.text);
   }
 
   // Test / driver code (temporary). Eventually will get this from the server.
