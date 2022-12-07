@@ -38,5 +38,24 @@ article.tweet header .user-handle {
 
 article.tweet p.content-text {
   font-weight: 600;
-  padding: inherit;
+  padding: 0 24px;
+}
+
+article.tweet footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5em;
+  border-top: 4px solid #545149;
+  padding: 0 1em;
+}
+
+article.tweet footer .tweet-age,
+article.tweet footer .actions-and-info {
+  font-size: 0.65em;
+  font-weight: 600;
+}
+
+article.tweet footer .actions-and-info {
+  letter-spacing: 0.2em;
+  color: #4056A1;
 }
