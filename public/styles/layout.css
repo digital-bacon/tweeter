@@ -34,3 +34,7 @@ main {
   width: 90%;
   margin: auto;
 }
+
+section {
+  padding: 2em 0;
+}
