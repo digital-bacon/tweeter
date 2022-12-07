@@ -53,24 +53,9 @@ $(document).ready(function() {
     const $contentText = $('<p>').addClass('content-text');
     const $tweetAge = $('<p>').addClass('tweet-age');
     const $actions = $('<p>').addClass('actions');
-    const $actionReportTweet = $('<a>')
-      .attr({
-        'href': '#',
-        'title': 'Report tweet',
-      })
-      .html(`<i class='fa-solid fa-flag'></i>`);
-    const $actionRetweet = $('<a>')
-      .attr({
-        'href': '#',
-        'title': 'Retweet',
-      })
-      .html(`<i class='fa-solid fa-retweet'></i>`);
-      const $actionSaveTweet = $('<a>')
-      .attr({
-        'href': '#',
-        'title': 'Save Tweet',
-      })
-      .html(`<i class='fa-solid fa-heart'></i>`);
+    const $actionReportTweet = $('<a>');
+    const $actionRetweet = $('<a>');
+    const $actionSaveTweet = $('<a>');
 
     $($article).append($header);
     $($article).append($contentText);
