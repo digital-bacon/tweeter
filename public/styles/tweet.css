@@ -38,4 +38,5 @@ article.tweet header .user-handle {
 
 article.tweet p.content-text {
   font-weight: 600;
+  padding: inherit;
 }
