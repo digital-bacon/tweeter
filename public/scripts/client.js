@@ -44,16 +44,75 @@ $(document).ready(function() {
   }
 
   const createTweetElement  = (tweetObject) => {
-    $(tweetHTML.user.name).text(tweetObject.user.name);
-    $(tweetHTML.user.handle).text(tweetObject.user.handle);
-    $(tweetHTML.user.avatar).attr({
+    const $article = $('<article>').addClass('tweet');
+    const $header = $('<header>');
+    const $footer = $('<footer>');
+    const $userImage = $('<img>').addClass('user-image');
+    const $userName = $('<p>').addClass('user-name');
+    const $userHandle = $('<p>').addClass('user-handle');
+    const $contentText = $('<p>').addClass('content-text');
+    const $tweetAge = $('<p>').addClass('tweet-age');
+    const $actions = $('<p>').addClass('actions');
+    const $actionReportTweet = $('<a>')
+      .attr({
+        'href': '#',
+        'title': 'Report tweet',
+      })
+      .html(`<i class='fa-solid fa-flag'></i>`);
+    const $actionRetweet = $('<a>')
+      .attr({
+        'href': '#',
+        'title': 'Retweet',
+      })
+      .html(`<i class='fa-solid fa-retweet'></i>`);
+      const $actionSaveTweet = $('<a>')
+      .attr({
+        'href': '#',
+        'title': 'Save Tweet',
+      })
+      .html(`<i class='fa-solid fa-heart'></i>`);
+
+    $($article).append($header);
+    $($article).append($contentText);
+    $($article).append($footer);
+    $($header).append($userImage);
+    $($header).append($userName);
+    $($header).append($userHandle);
+    $($footer).append($tweetAge);
+    $($footer).append($actions);
+    $($actions).append($actionReportTweet);
+    $($actions).append($actionRetweet);
+    $($actions).append($actionSaveTweet);
+
+    $($userName).text(tweetObject.user.name);
+    $($userHandle).text(tweetObject.user.handle);
+    $($userImage).attr({
       'src': tweetObject.user.avatars,
       'alt': `Profile image for ${tweetObject.user.name}`
     });
-    $(tweetHTML.content.text).text(tweetObject.content.text);
+    $($contentText).text(tweetObject.content.text);
     const tweetAgeInDays = calculateDateDiff('days', Date.now(), new Date(tweetObject.created_at));
     const ageOutput = tweetAgeInDays <= 1 ? 'Today' : `${tweetAgeInDays} days ago`;
-    $(tweetHTML.stats.tweetAge).text(ageOutput);
+    $($tweetAge).text(ageOutput);
+    $($actionReportTweet)
+      .attr({
+        'href': '#',
+        'title': 'Report tweet',
+      })
+      .html(`<i class='fa-solid fa-flag'></i>`);
+    $($actionRetweet)
+      .attr({
+        'href': '#',
+        'title': 'Retweet',
+      })
+      .html(`<i class='fa-solid fa-retweet'></i>`);
+    $($actionSaveTweet)
+      .attr({
+        'href': '#',
+        'title': 'Save Tweet',
+      })
+      .html(`<i class='fa-solid fa-heart'></i>`);
+    return $article;
   }
 
   // Test / driver code (temporary). Eventually will get this from the server.
