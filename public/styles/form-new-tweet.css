@@ -36,7 +36,7 @@
   padding: 0.75em 0;
 }
 
-.actions-and-info button {
+.new-tweet .actions-and-info button {
   background-color: #4056A1;
   color: #FFFFFF;
   border: none;
@@ -45,11 +45,11 @@
   transition: background-color 0.25s ease;
 }
 
-.actions-and-info button:hover,
-.actions-and-info button:focus {
+.new-tweet .actions-and-info button:hover,
+.new-tweet .actions-and-info button:focus {
   background-color: #e0753a;
 }
 
-.actions-and-info .counter {
+.new-tweet .actions-and-info .counter {
   margin-right: 0.25em;
 }
