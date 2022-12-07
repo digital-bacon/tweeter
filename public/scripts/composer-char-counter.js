@@ -15,5 +15,7 @@ $(document).ready(function() {
     if (counterValue < 0) {
       $(tweetCounter).removeClass('danger').addClass('danger');
     }
+
   })
+
 });

@@ -8,15 +8,17 @@
   background: transparent;
   border: none;
   border-bottom: 4px solid #545149;
-  height: 1.6em;
   resize: none;
 }
 
-.new-tweet #tweet-text,
-.new-tweet #tweet-text::placeholder {
+.new-tweet form label {
   color: #545149;
   font-weight: 600;
-  opacity: 1;
+}
+
+.new-tweet #tweet-text {
+  font-size: 0.8em;
+  font-weight: 600;
 }
 
 .new-tweet #tweet-text:focus::placeholder {
