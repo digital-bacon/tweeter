@@ -35,3 +35,7 @@ article.tweet header .user-handle {
   font-weight: 600;
   color: #c5cbe3;
 }
+
+article.tweet p.content-text {
+  font-weight: 600;
+}
