@@ -4,19 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function() {
-  const tweetHTML = {
-    user: {
-      name: $('article.tweet header .user-name'),
-      handle: $('article.tweet header .user-handle'),
-      avatar: $('article.tweet header .user-image'),
-    },
-    content: {
-      text: $('article.tweet .content-text'),
-    },
-    stats: {
-      tweetAge: $('article.tweet .tweet-age'),
-    },
-  }
 
   const calculateDateDiff = (returnMeasurement, date1, date2) => {
     const calculations = {
@@ -137,7 +124,7 @@ const data = [
     return $article;
   }
 
- renderTweets(data, '#tweets-container');
+  renderTweets(data, '#tweets-container');
 
 });
 
