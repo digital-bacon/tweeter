@@ -64,73 +64,26 @@ const data = [
   };
 
   const createTweetElement  = (tweetObject) => {
-    const $article = $('<article>');
-    const $header = $('<header>');
-    const $footer = $('<footer>');
-    const $userImage = $('<img>');
-    const $userName = $('<p>');
-    const $userHandle = $('<p>');
-    const $contentText = $('<p>');
-    const $tweetAge = $('<p>');
-    const $actions = $('<p>');
-    const $actionReportTweet = $('<a>');
-    const $actionRetweet = $('<a>');
-    const $actionSaveTweet = $('<a>');
-
-    $($article).append($header);
-    $($article).append($contentText);
-    $($article).append($footer);
-    $($header).append($userImage);
-    $($header).append($userName);
-    $($header).append($userHandle);
-    $($footer).append($tweetAge);
-    $($footer).append($actions);
-    $($actions).append($actionReportTweet);
-    $($actions).append($actionRetweet);
-    $($actions).append($actionSaveTweet);
-
-    $($article)
-      .addClass('tweet');
-    $($userName)
-      .addClass('user-name')
-      .text(tweetObject.user.name);
-    $($userHandle)
-      .addClass('user-handle')
-      .text(tweetObject.user.handle);
-    $($userImage)
-      .addClass('user-image')  
-      .attr({
-        'src': tweetObject.user.avatars,
-        'alt': `Profile image for ${tweetObject.user.name}`
-      });
-    $($contentText)
-      .addClass('content-text')  
-      .text(tweetObject.content.text);
     const tweetAgeInDays = calculateDateDiff('days', Date.now(), new Date(tweetObject.created_at));
     const ageOutput = tweetAgeInDays <= 1 ? 'Today' : `${tweetAgeInDays} days ago`;
-    $($tweetAge)
-      .addClass('tweet-age')
-      .text(ageOutput);
-    $($actions)
-      .addClass('actions');
-    $($actionReportTweet)
-      .attr({
-        'href': '#',
-        'title': 'Report tweet',
-      })
-      .html(`<i class='fa-solid fa-flag'></i>`);
-    $($actionRetweet)
-      .attr({
-        'href': '#',
-        'title': 'Retweet',
-      })
-      .html(`<i class='fa-solid fa-retweet'></i>`);
-    $($actionSaveTweet)
-      .attr({
-        'href': '#',
-        'title': 'Save Tweet',
-      })
-      .html(`<i class='fa-solid fa-heart'></i>`);
+    
+    const $article = 
+    `<article class="tweet">
+      <header>
+        <img src='${tweetObject.user.avatars}' alt='Profile image for ${tweetObject.user.name}' class="user-image" />
+        <p class="user-name">${tweetObject.user.name}</p>
+        <p class="user-handle">${tweetObject.user.handle}</p>
+      </header>
+      <p class="content-text">${tweetObject.content.text}</p>
+      <footer>
+        <p class="tweet-age">${ageOutput}</p>
+        <p class="actions">
+          <a href="#" title="Report tweet"><i class="fa-solid fa-flag"></i></a>
+          <a href="#" title="Retweet"><i class="fa-solid fa-retweet"></i></a>
+          <a href="#" title="Save tweet"><i class="fa-solid fa-heart"></i></a>
+        </p>
+      </footer>
+    </article>`
 
     return $article;
   }
