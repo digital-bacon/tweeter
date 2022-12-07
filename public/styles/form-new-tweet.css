@@ -4,7 +4,7 @@
   flex-direction: column;
 }
 
-.new-tweet #tweet-text {
+#tweet-text {
   background: transparent;
   border: none;
   border-bottom: 4px solid #545149;
@@ -16,16 +16,16 @@
   font-weight: 600;
 }
 
-.new-tweet #tweet-text {
+#tweet-text {
   font-size: 0.8em;
   font-weight: 600;
 }
 
-.new-tweet #tweet-text:focus::placeholder {
+#tweet-text:focus::placeholder {
   opacity: 0;
 }
 
-.new-tweet #tweet-text:focus-visible {
+#tweet-text:focus-visible {
   outline: none;
 }
 
