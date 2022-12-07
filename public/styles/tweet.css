@@ -54,22 +54,22 @@ article.tweet footer {
 }
 
 article.tweet footer .tweet-age,
-article.tweet footer .actions-and-info {
+article.tweet footer .actions {
   font-size: 0.65em;
   font-weight: 600;
 }
 
-article.tweet footer .actions-and-info {
+article.tweet footer .actions {
   letter-spacing: 0.2em;
   color: #4056A1;
 }
 
-article.tweet footer .actions-and-info a {
+article.tweet footer .actions a {
   color: #4056A1;
   transition: color 0.25s ease;
 }
 
-article.tweet footer .actions-and-info a:hover,
-article.tweet footer .actions-and-info a:focus {
+article.tweet footer .actions a:hover,
+article.tweet footer .actions a:focus {
   color: #e0753a;
 }
