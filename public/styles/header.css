@@ -8,6 +8,15 @@
   padding-top: 4em;
 }
 
+#user-banner picture {
+  height: 30vh;
+}
+
+#user-banner img {
+  max-height: 100%;
+  border-radius: 50%;
+}
+
 #user-banner h2 {
   margin-top: 0;
 }
