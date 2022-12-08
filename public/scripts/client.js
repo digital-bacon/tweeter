@@ -14,15 +14,30 @@ $(document).ready(function() {
 
   const createTweetElement  = (tweetObject) => {
     const ageOutput = timeago.format(tweetObject.created_at);
+    const $userImage = $('<img>')
+    .addClass('user-image')  
+    .attr({
+      'src': tweetObject.user.avatars,
+      'alt': `Profile image for ${tweetObject.user.name}`
+    });
+    const $userName = $('<p>')
+      .addClass('user-name')
+      .text(tweetObject.user.name);
+    const $userHandle = $('<p>')
+      .addClass('user-handle')
+      .text(tweetObject.user.handle);
+    const $contentText = $('<p>')
+      .addClass('content-text')  
+      .text(tweetObject.content.text);
     
     const $article = 
     `<article class="tweet">
       <header>
-        <img src='${tweetObject.user.avatars}' alt='Profile image for ${tweetObject.user.name}' class="user-image" />
-        <p class="user-name">${tweetObject.user.name}</p>
-        <p class="user-handle">${tweetObject.user.handle}</p>
+        ${$userImage.prop('outerHTML')}
+        ${$userName.prop('outerHTML')}
+        ${$userHandle.prop('outerHTML')}
       </header>
-      <p class="content-text">${tweetObject.content.text}</p>
+      ${$contentText.prop('outerHTML')}
       <footer>
         <p class="tweet-age">${ageOutput}</p>
         <p class="actions">
