@@ -19,6 +19,7 @@
 
 #user-banner h2 {
   margin-top: 0;
+  color: white;
 }
 
 @media screen and (min-width: 768px) {
