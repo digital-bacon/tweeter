@@ -5,31 +5,6 @@
  */
 $(document).ready(function() {
 
-  const calculateDateDiff = (returnMeasurement, date1, date2) => {
-    const calculations = {
-      milliseconds: function() {
-        return date1 - date2;
-      },
-      seconds: function() {
-        return Math.floor(this.milliseconds() / 1000);
-      },
-      minutes: function() {
-        return Math.floor(this.seconds() / 60);
-      },
-      hours: function() {
-        return Math.floor(this.minutes() / 60);
-      },
-      days: function() {
-        return Math.floor(this.hours() / 24);
-      },
-      years: function() {
-        return Math.floor(this.days() / 365);
-      },
-    }
-    const output = calculations[returnMeasurement.toLowerCase()]();
-    return output;
-  }
-
   const renderTweets = function(tweets, outputElement) {
     $(outputElement).empty();
     $.each(tweets, (index, tweetObject) => $('#tweets-container')
@@ -38,8 +13,9 @@ $(document).ready(function() {
   };
 
   const createTweetElement  = (tweetObject) => {
-    const tweetAgeInDays = calculateDateDiff('days', Date.now(), new Date(tweetObject.created_at));
-    const ageOutput = tweetAgeInDays <= 1 ? 'Today' : `${tweetAgeInDays} days ago`;
+    // const tweetAgeInDays = calculateDateDiff('days', Date.now(), new Date(tweetObject.created_at));
+    // const ageOutput = tweetAgeInDays <= 1 ? 'Today' : `${tweetAgeInDays} days ago`;
+    const ageOutput = timeago.format(tweetObject.created_at);
     
     const $article = 
     `<article class="tweet">
