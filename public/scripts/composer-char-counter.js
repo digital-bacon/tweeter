@@ -16,8 +16,7 @@ $(() => {
   }
 
   const tweetInputElement = $('#tweet-text');
-  const tweetInputParent = $(tweetInputElement).parent();
-  const counterElement = $(tweetInputParent).find('.counter');
+  const counterElement = $('.counter');
   const maxTweetLength = 140;
   $(counterElement).text(maxTweetLength);
   $(tweetInputElement).on('keyup', function(event) {

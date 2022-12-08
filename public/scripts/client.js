@@ -122,6 +122,7 @@ $(document).ready(function() {
     }
     $.post('/tweets', tweetData, (response) => {
       $newTweetForm[0].reset();
+      $('.counter').text('140');
       loadTweets('#tweets-container');
     });
   });
