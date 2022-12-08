@@ -78,7 +78,7 @@ $(document).ready(function() {
       isValid: false,
       message: null,
       eval: function(input, maxLength) {
-        if (input.length >= maxLength) {
+        if (input.length > maxLength) {
           this.isValid = false;
           this.message = `Tweets cannot exceed ${maxLength} characters`;
           return this.isValid
