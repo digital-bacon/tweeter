@@ -105,15 +105,14 @@ $(document).ready(function() {
     const tweetInputValue = $($tweetInputElement).val();
     validate.eval(tweetInputValue, 140);
     if (validate.minLength.isValid === false) {
-      alert(validate.minLength.message);
+      $('#new-tweet .error').text(validate.minLength.message);
       return;
     }
     if (validate.maxLength.isValid === false) {
-      alert(validate.maxLength.message);
+      $('#new-tweet .error').text(validate.maxLength.message);
       return;
     }
     $.post('/tweets', tweetData, (response) => {
-      console.log('POSTED!')
       loadTweets('#tweets-container');
     });
   });
