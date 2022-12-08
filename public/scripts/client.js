@@ -13,8 +13,6 @@ $(document).ready(function() {
   };
 
   const createTweetElement  = (tweetObject) => {
-    // const tweetAgeInDays = calculateDateDiff('days', Date.now(), new Date(tweetObject.created_at));
-    // const ageOutput = tweetAgeInDays <= 1 ? 'Today' : `${tweetAgeInDays} days ago`;
     const ageOutput = timeago.format(tweetObject.created_at);
     
     const $article = 
