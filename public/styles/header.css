@@ -1,13 +1,22 @@
 #user-banner {
   display: flex;
   flex-direction: column;
-  height: 400px;
   justify-content: center;
   align-items: center;
-  background: #EFE2BA url("https://www.transparenttextures.com/patterns/robots.png");
-  padding-top: 2em;
+  background: #000638 url('../images/aron-visuals-bZZp1PmHI0E-unsplash.jpg') center no-repeat;
+  background-size: cover;
+  padding-top: 4em;
 }
 
 #user-banner h2 {
   margin-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  
+  #user-banner {
+    height: 400px;
+    padding-top: 2em;
+  }
+
 }
