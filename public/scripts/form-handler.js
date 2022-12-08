@@ -45,12 +45,13 @@ $(() => {
     const tweetInputValue = $($tweetInputElement).val();
     validate.eval(tweetInputValue, 140);
     if (validate.minLength.isValid === false) {
-      console.log(validate.minLength.message);
+      alert(validate.minLength.message);
+      return;
     }
     if (validate.maxLength.isValid === false) {
-      console.log(validate.maxLength.message);
+      alert(validate.maxLength.message);
+      return;
     }
-    console.log(validate);
     $.post('/', tweetData, (response) => {
       console.log(response);
     });
