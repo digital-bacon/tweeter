@@ -4,6 +4,7 @@ article.tweet {
   padding: 0.25em 1em;
   margin-bottom: 2em;
   flex-direction: column;
+  overflow-wrap: break-word;
 }
 
 article.tweet:hover,
