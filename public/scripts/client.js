@@ -103,16 +103,25 @@ $(document).ready(function() {
     const tweetData = $newTweetForm.serialize();
     const $tweetInputElement = ('#tweet-text');
     const tweetInputValue = $($tweetInputElement).val();
+    const $errorElement = $("<div>").addClass('error');
     validate.eval(tweetInputValue, 140);
+    $('.error').remove();
     if (validate.minLength.isValid === false) {
-      $('#new-tweet .error').text(validate.minLength.message);
+      $errorElement.text(validate.minLength.message)
+        .insertBefore($tweetInputElement)
+        .hide()
+        .show('slow');
       return;
     }
     if (validate.maxLength.isValid === false) {
-      $('#new-tweet .error').text(validate.maxLength.message);
+      $errorElement.text(validate.maxLength.message)
+        .insertBefore($tweetInputElement)
+        .hide()
+        .show('slow');
       return;
     }
     $.post('/tweets', tweetData, (response) => {
+      $newTweetForm[0].reset();
       loadTweets('#tweets-container');
     });
   });
