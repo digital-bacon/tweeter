@@ -29,30 +29,45 @@ body {
   display: grid;
   grid-template-rows: 1fr;
   grid-row-gap: 2em;
-  grid-column-gap: 1em;
   font-family: 'Source Sans Pro', sans-serif;
   padding-top: 5em;
 }
 
 main, .new-tweet {
   width: 90%;
-  margin: auto;
+  justify-self: center;
+  padding-top: 2em;
 }
 
 @media (min-width: 1024px) {
   body {
     display: grid;
     grid-template-columns: [outer-start] 1fr [inner-start] 2fr;
-    grid-column-gap: 1em;
+    grid-column-gap: 2em;
+    grid-row-gap: 0;
+  }
+  main, .new-tweet {
+    width: 100%;
+  }
+  .new-tweet {
+    align-self: center;
+    padding-top: 0;
   }
   main {
     grid-area: inner;
+    padding-right: 2em;
+    align-self: start;
   }
+  
 }
 
 @media (min-width: 1920px) {
   body {
     grid-template-columns: minmax(auto, 25%) 1fr 2fr;
+  }
+  .new-tweet {
+    align-self: start;
+    padding-top: 4em;
   }
   main {
     grid-area: auto;
