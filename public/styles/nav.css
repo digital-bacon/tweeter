@@ -33,7 +33,7 @@ nav .write-tweet .write {
 nav .write-tweet .icon {
     display: block;
     width: 100%;
-    color: #F13C20;
+    color: #FAF33E;
     text-align: center;
     animation: .7s linear 1s infinite alternate bounce; 
 }
@@ -49,7 +49,7 @@ nav .write-tweet .icon {
 
 @media screen and (min-width: 768px) {
   nav {
-    background-color: #4056A1;
+    background-color: #23B5D3;
     padding: 0 1.5em;
     height: 5em;
     align-items: flex-start;
