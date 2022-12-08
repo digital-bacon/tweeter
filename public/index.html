@@ -34,7 +34,7 @@
   </head>
 
   <body>
-
+    
     <!-- Top nav bar (fixed) -->
     <nav>
       <div class="brand">tweeter</div>
@@ -60,9 +60,7 @@
     </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container">
-
-      <section class="new-tweet">
+    <section class="container new-tweet">
         <h2>Compose Tweet</h2>
         <form method="post" action="/tweets/" encytype="application/x-www-form-urlencoded" id="new-tweet">
           <label for="tweet-text">What are you humming about?</label>
@@ -77,9 +75,11 @@
             <output name="counter" class="counter" for="tweet-text"></output>
           </div>
         </form>
-      </section>
+    </section>
 
+    <main class="container">
       <section id="tweets-container"></section>
     </main>
+
   </body>
 </html>

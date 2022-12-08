@@ -26,15 +26,35 @@ body {
  */
 
 body {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-row-gap: 2em;
+  grid-column-gap: 1em;
   font-family: 'Source Sans Pro', sans-serif;
   padding-top: 5em;
 }
 
-main {
+main, .new-tweet {
   width: 90%;
   margin: auto;
 }
 
-section {
-  padding: 4em 0 0;
+@media (min-width: 1024px) {
+  body {
+    display: grid;
+    grid-template-columns: [outer-start] 1fr [inner-start] 2fr;
+    grid-column-gap: 1em;
+  }
+  main {
+    grid-area: inner;
+  }
+}
+
+@media (min-width: 1920px) {
+  body {
+    grid-template-columns: minmax(auto, 25%) 1fr 2fr;
+  }
+  main {
+    grid-area: auto;
+  }
 }
