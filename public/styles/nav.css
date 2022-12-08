@@ -34,7 +34,17 @@ nav .write-tweet .icon {
     display: block;
     width: 100%;
     color: #F13C20;
-    text-align: center;    
+    text-align: center;
+    animation: .7s linear 1s infinite alternate bounce; 
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(5px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 @media screen and (min-width: 768px) {
