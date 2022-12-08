@@ -1,4 +1,4 @@
-$(() => {
+$(document).ready(function() {
   
   const validate = {
     minLength: {
@@ -52,8 +52,9 @@ $(() => {
       alert(validate.maxLength.message);
       return;
     }
-    $.post('/', tweetData, (response) => {
-      console.log(response);
+    $.post('/tweets', tweetData, (response) => {
+      console.log('POSTED!')
+      loadTweets('#tweets-container');
     });
   });
   
