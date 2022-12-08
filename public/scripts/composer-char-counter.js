@@ -18,15 +18,17 @@ $(() => {
   const tweetInputElement = $('#tweet-text');
   const tweetInputParent = $(tweetInputElement).parent();
   const counterElement = $(tweetInputParent).find('.counter');
-  const maxTweetLength = 149;
+  const maxTweetLength = 140;
   $(counterElement).text(maxTweetLength);
-  $(tweetInputElement).on('keydown', function(event) {
+  $(tweetInputElement).on('keyup', function(event) {
     handleEnterKey(event);
     const currentLength = this.value.length;
     const counterText = getCounterText(maxTweetLength, currentLength);
     $(counterElement).text(counterText);
     if (isTweetLengthExceeded(maxTweetLength, currentLength)) {
       $(counterElement).removeClass('danger').addClass('danger');
+    } else {
+      $(counterElement).removeClass('danger');
     }
 
   })
