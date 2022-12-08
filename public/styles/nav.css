@@ -20,6 +20,7 @@ nav .write-tweet {
   flex-direction: column;
   border: none;
   background: transparent;
+  font-size: 0.85em;
 }
 
 nav .write-tweet .text {
