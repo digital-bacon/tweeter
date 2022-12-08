@@ -42,10 +42,10 @@
   padding: 0.25em 0.5em;
   cursor: pointer;
   transition: background-color 0.25s ease;
+  border-radius: 8px;
 }
 
-.new-tweet .actions-and-info button:hover,
-.new-tweet .actions-and-info button:focus {
+.new-tweet .actions-and-info button:hover {
   background-color: #e0753a;
 }
 
