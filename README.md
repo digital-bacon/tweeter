@@ -2,20 +2,57 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+## Disclaimer
 
-## Getting Started
+This app was built for educational purposes only. Do not use this app in any production environment or provide any sensitive information while using this app. The security and privacy of information you provide is **not** guaranteed.
 
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
-2. Clone your repository onto your local device.
-3. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+
+## Purpose
+
+Learn responsive design and AJAX using a familiar app as inspiration, Twitter.
+
+
+## Installation
+
+**Node.js:**
+
+`npm install`
+
+
+## Usage
+
+**Start the server:**
+
+`npm start local`
+
+**Open the app in your web browser:**
+
+http://localhost:8080/(http://localhost:8080/)
+
+If you would like to use a different port from 8080, open `server/index.js` and change the `PORT` variable.
+
+**Stop the server:**
+
+`CTRL^C` in your terminal
+
 
 ## Dependencies
 
-- Express
-- Node 5.10.x or above
+* [body parser](https://github.com/expressjs/body-parser) - Node.js body parsing middleware.
+* [chance](https://github.com/chancejs/chancejs) - Random generator helper for JavaScript.
+* [express](https://github.com/expressjs/express) - Fast, unopinionated, minimalist web framework for Node.js.
+* [jsdoc2md](https://github.com/jsdoc2md) - Generates markdown from js-doc annotated sources.
+* [md5](https://github.com/pvorb/node-md5) - JavaScript function for hashing messages with MD5.
+* [node 5.10.x or higher](https://github.com/nodejs) - Open-source, cross-platform JavaScript runtime environment.
+
+
+## Final Product
+
+!["Viewport: iPhone SE (emulated)"](https://github.com/digital-bacon/tweeter/blob/master/docs/tweeter_(iPhone%20SE).png)
+!["Viewport: iPad Mini (emulated)"](https://github.com/digital-bacon/tweeter/blob/master/docs/tweeter_(iPad%20Mini).png)
+!["Viewport: 1024x576 (actual)"](https://github.com/digital-bacon/tweeter/blob/master/docs/tweeter_1024x576.png)
+!["Viewport: 1536x864(actual)"](https://github.com/digital-bacon/tweeter/blob/master/docs/tweeter_1536x864.png)
+!["Viewport: 1920x1080 (actual)"](https://github.com/digital-bacon/tweeter/blob/master/docs/tweeter_1920x1080.png)
 
 
 ## Functions (client.js)
