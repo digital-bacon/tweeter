@@ -64,10 +64,10 @@ $(document).ready(function() {
     minLength: {
       isValid: false,
       message: null,
-      eval: function(input) {
-        if (!input) {
+      eval: function(input, minLength) {
+        if (!input || input.length < minLength) {
           this.isValid = false;
-          this.message = 'Please say something in your tweet!';
+          this.message = `Tweets need at least ${minLength} characters`;
           return this.isValid;
         }
         this.isValid = true;
@@ -87,8 +87,8 @@ $(document).ready(function() {
         return this.isValid;
       },
     },
-    eval: function(input, maxLength) {
-      this.minLength.eval(input);
+    eval: function(input, minLength, maxLength) {
+      this.minLength.eval(input, minLength);
       this.maxLength.eval(input, maxLength);
     },
   };
@@ -113,7 +113,7 @@ $(document).ready(function() {
     const $tweetInputElement = ('#tweet-text');
     const tweetInputValue = $($tweetInputElement).val();
     $('.error').remove();
-    validate.eval(tweetInputValue, MAX_TWEET_LENGTH);
+    validate.eval(tweetInputValue, MIN_TWEET_LENGTH, MAX_TWEET_LENGTH);
     const errorMessages = [];
     if (validate.minLength.isValid === false) {
       errorMessages.push(validate.minLength.message);
