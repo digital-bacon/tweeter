@@ -65,3 +65,16 @@ nav .write-tweet .icon {
   }
 
 }
+
+@media screen and (min-width: 1536px) {
+  nav {
+    justify-content: center;
+  }
+  nav .brand {
+    flex-basis: 1264px;
+  }
+  nav .write-tweet {
+    flex-basis: 200px;
+  }
+  
+}

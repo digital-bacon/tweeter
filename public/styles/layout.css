@@ -48,27 +48,21 @@ section {
     align-items: flex-start;
     padding-top: 175px;
   }
-  #user-banner {
-    flex-basis: 30vw;
-    padding-top: 0;
-    margin-left: 1.5em;
-  }
   main {
-    flex-basis: 60vw;
-    max-width: 60vw;
+    flex-basis: 58vw;
+    max-width: 58vw;
     margin-right: 1.5em;
   }
 }
 
+
 @media screen and (min-width: 1536px) {
-  nav {
+  body {
     justify-content: center;
   }
-  nav .brand {
-    flex-basis: 1264px;
+  main {
+    flex-basis: 932px;
+    max-width: 932px;
+    margin-left: 3em;
   }
-  nav .write-tweet {
-    flex-basis: 200px;
-  }
-  
 }
