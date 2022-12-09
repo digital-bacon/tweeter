@@ -64,15 +64,15 @@ article.tweet footer .actions {
 
 article.tweet footer .actions {
   letter-spacing: 0.35em;
-  color: #4056A1;
+  color: #F06C9B;
 }
 
 article.tweet footer .actions a {
-  color: #4056A1;
+  color: #F06C9B;
   transition: color 0.25s ease;
 }
 
 article.tweet footer .actions a:hover,
 article.tweet footer .actions a:focus {
-  color: #e0753a;
+  color: #E82167;
 }
