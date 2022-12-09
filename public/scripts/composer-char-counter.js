@@ -1,34 +1,17 @@
 $(document).ready(function() {
-  const handleEnterKey = (event) => {
-    if (event.key === 'Enter') {
-      event.preventDefault();
-    }
-  };
-
-  const getCounterText = (maxTweetLength, currentTweetLength) => {
-    const counterValue = maxTweetLength - currentTweetLength;
-    return counterValue;
-  }
-
-  const isTweetLengthExceeded = (maxTweetLength, currentTweetLength) => {
-    isExceeded = (maxTweetLength - currentTweetLength) < 0;
-    return isExceeded;
-  }
-
-  const maxTweetLength = MAX_TWEET_LENGTH;
   const $tweetInputElement = $('#tweet-text');
-  const $counterElement = $('.counter').text(maxTweetLength);
+  const $counterElement = $('.counter').text(MAX_TWEET_LENGTH);
   $($tweetInputElement).on('keyup', function(event) {
-    handleEnterKey(event);
-    const currentLength = this.value.length;
-    const counterText = getCounterText(maxTweetLength, currentLength);
+    const currentTweetLength = this.value.length;
+    const counterText = MAX_TWEET_LENGTH - currentTweetLength;
     $counterElement.text(counterText);
-    if (isTweetLengthExceeded(maxTweetLength, currentLength)) {
+    const isLengthExceeded = counterText < 0;
+    if (isLengthExceeded === true) {
       $counterElement.removeClass('danger').addClass('danger');
-    } else {
-      $counterElement.removeClass('danger');
+      return;
     }
 
+    $counterElement.removeClass('danger');
   })
 
 });
