@@ -1,7 +1,6 @@
 article.tweet {
   display: flex;
   border: 4px solid #000638;
-  border-radius: 8px;
   padding: 0.25em 1em;
   margin-bottom: 2em;
   flex-direction: column;
@@ -64,15 +63,15 @@ article.tweet footer .actions {
 
 article.tweet footer .actions {
   letter-spacing: 0.35em;
-  color: #F06C9B;
+  color: #4056A1;
 }
 
 article.tweet footer .actions a {
-  color: #F06C9B;
+  color: #4056A1;
   transition: color 0.25s ease;
 }
 
 article.tweet footer .actions a:hover,
 article.tweet footer .actions a:focus {
-  color: #E82167;
+  color: #e0753a;
 }

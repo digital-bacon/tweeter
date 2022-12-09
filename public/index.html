@@ -51,29 +51,26 @@
     <!-- Header (banner) content here -->
     <header id="user-banner">
       <picture>
-        <source srcset="/images/pexels-pixabay-460797_1280x853.jpg" media="(orientation: portrait)">  
-        <source srcset="/images/pexels-pixabay-460797_1920x1280.jpg" media="(orientation: portrait)">  
-        <img src="/images/pexels-pixabay-460797_640x427.jpg" alt="Profile image"> 
+        <img src="/images/profile-hex.png" alt="Profile image"> 
       </picture>
       <h2>Your Name</h2>
     </header>
 
     <!-- Page-specific (main) content here -->
     <section class="container new-tweet">
-        <h2>Compose Tweet</h2>
-        <form method="post" action="/tweets/" encytype="application/x-www-form-urlencoded" id="new-tweet">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea
-            name="text"
-            id="tweet-text"
-            placeholder="Enter tweet text..."
-          ></textarea>
-          
-          <div class="actions-and-info">
-            <button type="submit" name="submit-tweet">Send Tweet</button>
-            <output name="counter" class="counter" for="tweet-text"></output>
-          </div>
-        </form>
+      <form method="post" action="/tweets/" encytype="application/x-www-form-urlencoded" id="new-tweet">
+        <label for="tweet-text">What are you humming about?</label>
+        <textarea
+          name="text"
+          id="tweet-text"
+          placeholder="Enter tweet text..."
+        ></textarea>
+        
+        <div class="actions-and-info">
+          <button type="submit" name="submit-tweet">Send Tweet</button>
+          <output name="counter" class="counter" for="tweet-text"></output>
+        </div>
+      </form>
     </section>
 
     <main class="container">

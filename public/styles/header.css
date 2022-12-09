@@ -3,31 +3,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #000638 url('../images/aron-visuals-bZZp1PmHI0E-unsplash.jpg') center no-repeat;
-  background-size: cover;
-  padding-top: 4em;
-  height: 50vh;
+  background: #d89820 url("https://www.transparenttextures.com/patterns/food.png");
+  padding-top: 96px;
+  height: 400px;
 }
 
 #user-banner picture {
-  height: 28vh;
+  max-height: 275px;
 }
 
 #user-banner img {
   max-height: 100%;
-  border-radius: 50%;
 }
 
 #user-banner h2 {
-  margin-top: .5em;
+  margin-top: 0;
   color: white; 
 }
 
-@media screen and (min-width: 768px) {
-  
+@media screen and (min-width: 1024px) {
   #user-banner {
-    height: 400px;
-    padding-top: 2em;
+    padding-top: 0;
   }
-
 }

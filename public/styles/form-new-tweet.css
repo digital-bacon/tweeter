@@ -36,13 +36,12 @@
 }
 
 .new-tweet .actions-and-info button {
-  background-color: #F06C9B;
+  background-color: #4056A1;
   color: #FFFFFF;
   border: none;
   padding: 0.25em 0.5em;
   cursor: pointer;
   transition: background-color 0.25s ease;
-  border-radius: 8px;
 }
 
 .new-tweet .actions-and-info button:hover {
