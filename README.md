@@ -48,11 +48,11 @@ If you would like to use a different port from 8080, open `server/index.js` and 
 
 ## Final Product
 
-!["Viewport: iPhone SE (emulated)"](https://github.com/digital-bacon/tweeter/blob/master/docs/tweeter_(iPhone%20SE).png)
-!["Viewport: iPad Mini (emulated)"](https://github.com/digital-bacon/tweeter/blob/master/docs/tweeter_(iPad%20Mini).png)
-!["Viewport: 1024x576 (actual)"](https://github.com/digital-bacon/tweeter/blob/master/docs/tweeter_1024x576.png)
-!["Viewport: 1536x864(actual)"](https://github.com/digital-bacon/tweeter/blob/master/docs/tweeter_1536x864.png)
-!["Viewport: 1920x1080 (actual)"](https://github.com/digital-bacon/tweeter/blob/master/docs/tweeter_1920x1080.png)
+!["Viewport: iPhone SE (emulated)"](https://github.com/digital-bacon/tweeter/blob/master/docs/tweeter_(iPhone%20SE).png | height=400)
+!["Viewport: iPad Mini (emulated)"](https://github.com/digital-bacon/tweeter/blob/master/docs/tweeter_(iPad%20Mini).png | height=400)
+!["Viewport: 1024x576 (actual)"](https://github.com/digital-bacon/tweeter/blob/master/docs/tweeter_1024x576.png | height=400)
+!["Viewport: 1536x864(actual)"](https://github.com/digital-bacon/tweeter/blob/master/docs/tweeter_1536x864.png | height=400)
+!["Viewport: 1920x1080 (actual)"](https://github.com/digital-bacon/tweeter/blob/master/docs/tweeter_1920x1080.png | height=400)
 
 
 ## Functions (client.js)
