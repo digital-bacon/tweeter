@@ -97,29 +97,41 @@ $(document).ready(function() {
   Object.defineProperty(validate.minLength, 'eval', { enumerable: false });
   Object.defineProperty(validate.maxLength, 'eval', { enumerable: false });
 
+  // Returns an error element with the supplied error text
+  const generateErrorElement = (errorText) => {
+    const $errorElement = $("<div>")
+      .addClass('error')
+      .append('<i class="fa-solid fa-triangle-exclamation"></i>&nbsp;&nbsp;')
+      .append(errorText);
+    return $errorElement;      
+  }
+
   const $newTweetForm = $('#new-tweet');
   $newTweetForm.on('submit', (event) => {
     event.preventDefault();
     const tweetData = $newTweetForm.serialize();
     const $tweetInputElement = ('#tweet-text');
     const tweetInputValue = $($tweetInputElement).val();
-    const $errorElement = $("<div>").addClass('error');
-    validate.eval(tweetInputValue, 140);
     $('.error').remove();
+    validate.eval(tweetInputValue, 140);
+    const errorMessages = [];
     if (validate.minLength.isValid === false) {
-      $errorElement.text(validate.minLength.message)
-        .insertBefore($tweetInputElement)
-        .hide()
-        .show('slow');
-      return;
+      errorMessages.push(validate.minLength.message);
     }
+
     if (validate.maxLength.isValid === false) {
-      $errorElement.text(validate.maxLength.message)
+      errorMessages.push(validate.minLength.message);
+    }
+
+    if (errorMessages.length > 0) {
+      const $errorElement = generateErrorElement(errorMessages[0]);
+      $errorElement
         .insertBefore($tweetInputElement)
         .hide()
         .show('slow');
       return;
     }
+
     $.post('/tweets', tweetData, (response) => {
       $newTweetForm[0].reset();
       $('.counter').text('140');

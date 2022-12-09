@@ -56,5 +56,6 @@
 .new-tweet .error {
   border: 4px solid #ef3c22;
   border-radius: 3px;
+  padding: 0.25em 1.5em;
   color: #ef3c22;
 }
