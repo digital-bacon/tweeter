@@ -52,8 +52,8 @@ $(document).ready(function() {
       .addClass('error')
       .append('<i class="fa-solid fa-triangle-exclamation"></i>&nbsp;&nbsp;')
       .append(errorText);
-    return $errorElement;     
-  }
+    return $errorElement;
+  };
 
   const $newTweetForm = $('#new-tweet');
   $newTweetForm.on('submit', (event) => {
