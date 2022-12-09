@@ -113,14 +113,14 @@ $(document).ready(function() {
     const $tweetInputElement = ('#tweet-text');
     const tweetInputValue = $($tweetInputElement).val();
     $('.error').remove();
-    validate.eval(tweetInputValue, 140);
+    validate.eval(tweetInputValue, MAX_TWEET_LENGTH);
     const errorMessages = [];
     if (validate.minLength.isValid === false) {
       errorMessages.push(validate.minLength.message);
     }
 
     if (validate.maxLength.isValid === false) {
-      errorMessages.push(validate.minLength.message);
+      errorMessages.push(validate.maxLength.message);
     }
 
     if (errorMessages.length > 0) {
@@ -134,7 +134,7 @@ $(document).ready(function() {
 
     $.post('/tweets', tweetData, (response) => {
       $newTweetForm[0].reset();
-      $('.counter').text('140');
+      $('.counter').text(`${MAX_TWEET_LENGTH}`);
       loadTweets('#tweets-container');
     });
   });

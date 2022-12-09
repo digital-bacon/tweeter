@@ -17,7 +17,7 @@ $(() => {
 
   const tweetInputElement = $('#tweet-text');
   const counterElement = $('.counter');
-  const maxTweetLength = 140;
+  const maxTweetLength = MAX_TWEET_LENGTH;
   $(counterElement).text(maxTweetLength);
   $(tweetInputElement).on('keyup', function(event) {
     handleEnterKey(event);
