@@ -24,7 +24,7 @@ $(document).ready(function() {
         if (input.length > maxLength) {
           this.isValid = false;
           this.message = `Tweets cannot exceed ${maxLength} character(s) long`;
-          return this.isValid
+          return this.isValid;
         }
         this.isValid = true;
         return this.isValid;
@@ -52,7 +52,7 @@ $(document).ready(function() {
       .addClass('error')
       .append('<i class="fa-solid fa-triangle-exclamation"></i>&nbsp;&nbsp;')
       .append(errorText);
-    return $errorElement;      
+    return $errorElement;     
   }
 
   const $newTweetForm = $('#new-tweet');
@@ -81,7 +81,7 @@ $(document).ready(function() {
       return;
     }
 
-    $.post('/tweets', tweetData, (response) => {
+    $.post('/tweets', tweetData, () => {
       $('.error').remove();
       $newTweetForm[0].reset();
       $('.counter').text(`${MAX_TWEET_LENGTH}`);
@@ -114,11 +114,11 @@ $(document).ready(function() {
   const createTweetElement  = (tweetObject) => {
     const ageOutput = timeago.format(tweetObject.created_at);
     const $userImage = $('<img>')
-    .addClass('user-image')  
-    .attr({
-      'src': tweetObject.user.avatars,
-      'alt': `Profile image for ${tweetObject.user.name}`
-    });
+      .addClass('user-image')
+      .attr({
+        'src': tweetObject.user.avatars,
+        'alt': `Profile image for ${tweetObject.user.name}`
+      });
     const $userName = $('<p>')
       .addClass('user-name')
       .text(tweetObject.user.name);
@@ -126,9 +126,9 @@ $(document).ready(function() {
       .addClass('user-handle')
       .text(tweetObject.user.handle);
     const $contentText = $('<p>')
-      .addClass('content-text')  
+      .addClass('content-text')
       .text(tweetObject.content.text);
-    const $article = 
+    const $article =
     `<article class="tweet">
       <header>
         ${$userImage.prop('outerHTML')}
@@ -144,7 +144,7 @@ $(document).ready(function() {
           <a href="#" title="Save tweet"><i class="fa-solid fa-heart"></i></a>
         </p>
       </footer>
-    </article>`
+    </article>`;
 
     return $article;
   };
@@ -159,9 +159,9 @@ $(document).ready(function() {
    */
   const loadTweets = (outputElement) => {
     $.ajax('/tweets', { method: 'GET' })
-    .then((tweets) => {
-      renderTweets(tweets, outputElement);
-    });
+      .then((tweets) => {
+        renderTweets(tweets, outputElement);
+      });
   };
   
   // Pre-populate tweets
