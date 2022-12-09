@@ -39,7 +39,6 @@ main {
 
 section {
   padding: 1.5em 0;
-  transition: left 0.5s;
 }
 
 @media screen and (min-width: 1024px) {
@@ -52,16 +51,12 @@ section {
   #user-banner {
     flex-basis: 30vw;
     padding-top: 0;
-    margin: 4vw;
+    margin-left: 1.5em;
   }
   main {
     flex-basis: 60vw;
     max-width: 60vw;
-    padding-right: 1.5em;
+    margin-right: 1.5em;
   }
   
-}
-
-@media screen and (min-width: 1920px) {
-
 }
