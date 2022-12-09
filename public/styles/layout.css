@@ -16,7 +16,7 @@ html {
  */
 
 body {
-  color: #000638;
+  color: #545149;
   background-color: #f7f7f7;
   font-size: 24px;
 }
@@ -26,54 +26,42 @@ body {
  */
 
 body {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-row-gap: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-main, .new-tweet {
-  width: 100vw;
-  justify-self: center;
-  padding: 2vw 4vw;
+main {
+  width: 90vw;
+  max-width: 90vw;
+}
+
+section {
+  padding: 1.5em 0;
+  transition: left 0.5s;
 }
 
 @media screen and (min-width: 1024px) {
   body {
-    padding-top: 5em;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 175px;
   }
-}
-@media screen and (min-width: 1024px) {
-  body {
-    display: grid;
-    grid-template-columns: [outer-start] 1fr [inner-start] 2fr;
-    grid-column-gap: 2em;
-    grid-row-gap: 0;
-  }
-  main, .new-tweet {
-    width: 100%;
-  }
-  .new-tweet {
-    align-self: center;
+  #user-banner {
+    flex-basis: 30vw;
     padding-top: 0;
+    margin: 4vw;
   }
   main {
-    grid-area: inner;
-    padding-right: 2em;
-    align-self: start;
+    flex-basis: 60vw;
+    max-width: 60vw;
+    padding-right: 1.5em;
   }
   
 }
 
 @media screen and (min-width: 1920px) {
-  body {
-    grid-template-columns: minmax(auto, 25%) 1fr 2fr;
-  }
-  .new-tweet {
-    align-self: start;
-    padding-top: 4em;
-  }
-  main {
-    grid-area: auto;
-  }
+
 }

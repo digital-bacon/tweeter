@@ -6,12 +6,12 @@
 #tweet-text {
   background: transparent;
   border: none;
-  border-bottom: 4px solid #000638;
+  border-bottom: 4px solid #545149;
   resize: none;
 }
 
 .new-tweet form label {
-  color: #000638;
+  color: #545149;
   font-weight: 600;
 }
 
@@ -42,6 +42,7 @@
   padding: 0.25em 0.5em;
   cursor: pointer;
   transition: background-color 0.25s ease;
+  border-radius: 3px;
 }
 
 .new-tweet .actions-and-info button:hover {

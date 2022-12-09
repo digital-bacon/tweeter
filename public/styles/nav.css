@@ -49,9 +49,6 @@ nav .write-tweet .icon {
 }
 
 @media screen and (min-width: 1024px) {
-  body {
-    padding-top: 120px;
-  }
   nav {
     background-color: #4056A1;
     position: fixed;
