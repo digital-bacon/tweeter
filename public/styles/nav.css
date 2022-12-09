@@ -1,19 +1,13 @@
 nav {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 120px;
-  position: absolute;
-  width: 100%;
-}
-
-nav .container {
-  flex-basis: 1560px;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   color: #FFFFFF;
+  font-size: 24px;
+  height: 120px;
   padding: 0.5em 1.5em;
+  position: absolute;
+  width: 100%;
 }
 
 nav .brand {
@@ -24,6 +18,7 @@ nav .brand {
 nav .write-tweet {
   display: flex;
   flex-direction: column;
+  align-items: center;
   border: none;
   background: transparent;
   font-size: 0.85em;
