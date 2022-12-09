@@ -1,4 +1,4 @@
-$(() => {
+$(document).ready(function() {
   const handleEnterKey = (event) => {
     if (event.key === 'Enter') {
       event.preventDefault();
