@@ -94,7 +94,7 @@ $(document).ready(function() {
    * Function that receives tweet data and prepends each tweet as html
    * to an specified existing output element
    * @param {Object[]} tweets - An array of tweet objects
-   * @param {string} outputElement - The selector of the html element
+   * @param {string | Object} outputElement - The selector of the html element
    * to which you wish to prepend the resulting html. Accepts any valid
    * jQuery selector
    */
@@ -153,7 +153,7 @@ $(document).ready(function() {
    * Function that retrieves tweet data from a pre-configured endpoint,
    * and then generates HTML for each tweet, outputting the HTML to the
    * specified existing output element
-   * @param {string} outputElement - The selector of the html element
+   * @param {string | Object} outputElement - The selector of the html element
    * to which you wish to prepend the resulting html. Accepts any valid
    * jQuery selector
    */
