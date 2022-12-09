@@ -10,7 +10,7 @@ $(document).ready(function() {
       eval: function(input, minLength) {
         if (!input || input.length < minLength) {
           this.isValid = false;
-          this.message = `Tweets need to be at least ${minLength} character(s) long`;
+          this.message = `Please enter at least ${minLength} character(s)`;
           return this.isValid;
         }
         this.isValid = true;
@@ -23,7 +23,7 @@ $(document).ready(function() {
       eval: function(input, maxLength) {
         if (input.length > maxLength) {
           this.isValid = false;
-          this.message = `Tweets cannot exceed ${maxLength} character(s) long`;
+          this.message = `Please limit your input to a maximum of ${maxLength} character(s)`;
           return this.isValid;
         }
         this.isValid = true;
