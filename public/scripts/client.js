@@ -61,7 +61,6 @@ $(document).ready(function() {
     const tweetData = $newTweetForm.serialize();
     const $tweetInputElement = ('#tweet-text');
     const tweetInputValue = $($tweetInputElement).val();
-    $('.error').remove();
     validate.eval(tweetInputValue, MIN_TWEET_LENGTH, MAX_TWEET_LENGTH);
     const errorMessages = [];
     if (validate.minLength.isValid === false) {
@@ -73,6 +72,7 @@ $(document).ready(function() {
     }
 
     if (errorMessages.length > 0) {
+      $('.error').remove();
       const $errorElement = generateErrorElement(errorMessages[0]);
       $errorElement
         .insertBefore($tweetInputElement)
@@ -82,6 +82,7 @@ $(document).ready(function() {
     }
 
     $.post('/tweets', tweetData, (response) => {
+      $('.error').remove();
       $newTweetForm[0].reset();
       $('.counter').text(`${MAX_TWEET_LENGTH}`);
       loadTweets('#tweets-container');
