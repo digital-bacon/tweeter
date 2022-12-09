@@ -34,7 +34,7 @@ $(document).ready(function() {
 
   const $tweetInputElement = $('#tweet-text');
   const $counterElement = $('.counter').text(MAX_TWEET_LENGTH);
-  $($tweetInputElement).on('keyup', () => {
+  $($tweetInputElement).on('input', () => {
     const counterValue = getRemainingTweetLength($tweetInputElement, MAX_TWEET_LENGTH);
     $($counterElement).text(counterValue);
     setCounterClass($counterElement, counterValue);
