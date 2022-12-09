@@ -15,19 +15,18 @@ $(document).ready(function() {
     return isExceeded;
   }
 
-  const tweetInputElement = $('#tweet-text');
-  const counterElement = $('.counter');
   const maxTweetLength = MAX_TWEET_LENGTH;
-  $(counterElement).text(maxTweetLength);
-  $(tweetInputElement).on('keyup', function(event) {
+  const $tweetInputElement = $('#tweet-text');
+  const $counterElement = $('.counter').text(maxTweetLength);
+  $($tweetInputElement).on('keyup', function(event) {
     handleEnterKey(event);
     const currentLength = this.value.length;
     const counterText = getCounterText(maxTweetLength, currentLength);
-    $(counterElement).text(counterText);
+    $counterElement.text(counterText);
     if (isTweetLengthExceeded(maxTweetLength, currentLength)) {
-      $(counterElement).removeClass('danger').addClass('danger');
+      $counterElement.removeClass('danger').addClass('danger');
     } else {
-      $(counterElement).removeClass('danger');
+      $counterElement.removeClass('danger');
     }
 
   })
