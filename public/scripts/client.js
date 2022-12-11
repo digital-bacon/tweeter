@@ -56,14 +56,16 @@ $(document).ready(function() {
   };
 
   const $newTweetForm = $('#new-tweet');
+  const $tweetInputElement = ('#tweet-text');
   $(".write-tweet").click(() => {
-    $($newTweetForm).closest('section').slideToggle();
+    $($newTweetForm).closest('section')
+      .slideToggle()
+      $($tweetInputElement).focus();
   });
 
   $newTweetForm.on('submit', (event) => {
     event.preventDefault();
     const tweetData = $newTweetForm.serialize();
-    const $tweetInputElement = ('#tweet-text');
     const tweetInputValue = $($tweetInputElement).val();
     validate.eval(tweetInputValue, MIN_TWEET_LENGTH, MAX_TWEET_LENGTH);
     const errorMessages = [];
