@@ -1,0 +1,61 @@
+.new-tweet form {
+  display: flex;
+  flex-direction: column;
+}
+
+#tweet-text {
+  background: transparent;
+  border: none;
+  border-bottom: 4px solid #545149;
+  resize: none;
+}
+
+.new-tweet form label {
+  color: #545149;
+  font-weight: 600;
+}
+
+#tweet-text {
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+#tweet-text:focus::placeholder {
+  opacity: 0;
+}
+
+#tweet-text:focus-visible {
+  outline: none;
+}
+
+.new-tweet .actions-and-info {
+  font-family: 'Bungee', cursive;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75em 0;
+}
+
+.new-tweet .actions-and-info button {
+  background-color: #4056A1;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  border-radius: 3px;
+}
+
+.new-tweet .actions-and-info button:hover {
+  background-color: #d89820;
+}
+
+.new-tweet .actions-and-info .counter {
+  margin-right: 0.25em;
+}
+
+.new-tweet .error {
+  border: 4px solid #ef3c22;
+  border-radius: 3px;
+  padding: 0.25em 1.5em;
+  color: #ef3c22;
+}

@@ -1,0 +1,59 @@
+/*
+ * Do not modify these two selectors, please
+ */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+
+body {
+  color: #545149;
+  background-color: #f5f1ec;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+main {
+  width: 90vw;
+  max-width: 90vw;
+}
+
+section {
+  padding: 1.5em 0;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 175px;
+  }
+  main {
+    flex-basis: 58vw;
+    max-width: 58vw;
+    margin-right: 1.5em;
+  }
+}
+
+
+@media screen and (min-width: 1536px) {
+  body {
+    justify-content: center;
+  }
+  main {
+    flex-basis: 932px;
+    max-width: 932px;
+    margin-left: 3em;
+  }
+}

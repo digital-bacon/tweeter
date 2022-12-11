@@ -1,0 +1,38 @@
+#user-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #d89820 url("https://www.transparenttextures.com/patterns/food.png");
+  padding-top: 96px;
+  height: 400px;
+  width: 100%;
+}
+
+#user-banner picture {
+  flex-basis: 275px;
+}
+
+#user-banner img {
+  max-height: 100%;
+}
+
+#user-banner h2 {
+  margin-top: 0;
+  color: white;
+}
+
+@media screen and (min-width: 1024px) {
+  #user-banner {
+    flex-basis: 30vw;
+    padding-top: 0;
+    margin-left: 1.5em;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  #user-banner {
+    flex-basis: 460px;
+  }
+  
+}
