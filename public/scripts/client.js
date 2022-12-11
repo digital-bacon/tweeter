@@ -56,6 +56,10 @@ $(document).ready(function() {
   };
 
   const $newTweetForm = $('#new-tweet');
+  $(".write-tweet").click(() => {
+    $($newTweetForm).closest('section').slideToggle();
+  });
+
   $newTweetForm.on('submit', (event) => {
     event.preventDefault();
     const tweetData = $newTweetForm.serialize();
