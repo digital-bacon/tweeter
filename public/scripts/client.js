@@ -57,7 +57,7 @@ $(document).ready(function() {
 
   const $newTweetForm = $('#new-tweet');
   const $tweetInputElement = ('#tweet-text');
-  $(".write-tweet").click(() => {
+  $(".write-tweet").on('click', () => {
     $($newTweetForm).closest('section')
       .slideToggle()
       $($tweetInputElement).focus();
@@ -99,6 +99,9 @@ $(document).ready(function() {
   const $btnTopOfPage = $('#btn-top');
   $btnTopOfPage.on('click', () => {
     $('html, body').animate({scrollTop: 0}, 400);
+    $($newTweetForm).closest('section')
+      .show()
+      $($tweetInputElement).focus();
   })
     
   $(window).on('scroll', function() {
