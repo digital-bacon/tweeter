@@ -29,10 +29,8 @@
     margin-left: 1.5em;
   }
 }
-
 @media screen and (min-width: 1536px) {
   #user-banner {
     flex-basis: 460px;
   }
-  
 }

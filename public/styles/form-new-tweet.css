@@ -29,7 +29,7 @@
 }
 
 .new-tweet .actions-and-info {
-  font-family: 'Bungee', cursive;
+  font-family: "Bungee", cursive;
   display: flex;
   justify-content: space-between;
   padding: 0.75em 0;
