@@ -57,7 +57,7 @@ $(document).ready(function() {
 
   const $newTweetForm = $('#new-tweet');
   const $tweetInputElement = ('#tweet-text');
-  $(".write-tweet").click(() => {
+  $(".write-tweet").on('click', () => {
     $($newTweetForm).closest('section')
       .slideToggle()
       $($tweetInputElement).focus();
