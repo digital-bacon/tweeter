@@ -96,6 +96,22 @@ $(document).ready(function() {
 
   });
 
+  const $btnTopOfPage = $('#btn-top');
+  $btnTopOfPage.on('click', () => {
+    $('html, body').animate({scrollTop: 0}, 400);
+    $($newTweetForm).closest('section')
+      .show()
+      $($tweetInputElement).focus();
+  })
+    
+  $(window).on('scroll', function() {
+    if ($(this).scrollTop() > 50) {
+      $($btnTopOfPage).fadeIn(150);
+      return;
+    }
+    $($btnTopOfPage).fadeOut(150);
+  });
+  
   /**
    * Function that receives tweet data and prepends each tweet as html
    * to an specified existing output element
