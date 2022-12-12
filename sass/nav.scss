@@ -1,44 +1,56 @@
+$base-text-color: #545149;
+$base-color: #4056A1;
+$base-border-color: #545149;
+$base-text-color: #545149;
+$base-highlight-color: #d89820;
+$base-attention-color: #ef3c22;
+$base-muted-color: #c5cbe3;
+$light-bg-color: #f5f1ec;
+$light-text-color: #FFFFFF;
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #FFFFFF;
+  color: $light-text-color;
   font-size: 24px;
   height: 120px;
   padding: 0.5em 1.5em;
   position: fixed;
   width: 100%;
-}
 
-nav .brand {
-  font-family: 'Bungee', cursive;
-  font-size: 1.8em;
-}
+  .brand {
+    font-family: 'Bungee', cursive;
+    font-size: 1.8em;
+  }
+  
+  .write-tweet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    background: transparent;
+    font-size: 0.85em;
+    cursor: pointer;
 
-nav .write-tweet {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: none;
-  background: transparent;
-  font-size: 0.85em;
-  cursor: pointer;
-}
+    .text {
+      color: $light-text-color;
+    }
+    
+    .icon {
+      display: block;
+      width: 100%;
+      color: $base-attention-color;
+      text-align: center;
+      animation: .7s linear 1s infinite alternate bounce; 
+    }
 
-nav .write-tweet .text {
-  color: white;
-}
+    .write {
+      font-weight: 600;
+    }
+    
+  }
 
-nav .write-tweet .write {
-  font-weight: 600;
-}
-
-nav .write-tweet .icon {
-    display: block;
-    width: 100%;
-    color: #ef3c22;
-    text-align: center;
-    animation: .7s linear 1s infinite alternate bounce; 
 }
 
 #btn-top {
@@ -46,12 +58,12 @@ nav .write-tweet .icon {
   position: fixed;
   right: 0.5em;
   bottom: 0.5em;
-  background: #ef3c22;
+  background: $base-attention-color;
   padding: 0.5em;
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  color: #FFFFFF;
+  color: $light-text-color;
   width: 2.5em;
   height: 2.5em;
 }
@@ -60,24 +72,28 @@ nav .write-tweet .icon {
   from {
     transform: translateY(5px);
   }
+  
   to {
     transform: translateY(0);
   }
+
 }
 
 @media screen and (min-width: 1024px) {
   nav {
-    background-color: #4056A1;
+    background-color: $base-color;
     position: fixed;
     top: 0;
-  }
-  
-  nav .brand {
-    font-size: 2em;
-    padding-top: 0.5em;
-  }
-  nav .write-tweet {
-    font-size: 1em;
+
+    .brand {
+      font-size: 2em;
+      padding-top: 0.5em;
+    }
+
+    .write-tweet {
+      font-size: 1em;
+    }
+
   }
 
 }
@@ -85,12 +101,15 @@ nav .write-tweet .icon {
 @media screen and (min-width: 1536px) {
   nav {
     justify-content: center;
-  }
-  nav .brand {
-    flex-basis: 1264px;
-  }
-  nav .write-tweet {
-    flex-basis: 200px;
+
+    .brand {
+      flex-basis: 1264px;
+    }
+
+    .write-tweet {
+      flex-basis: 200px;
+    }
+
   }
   
 }

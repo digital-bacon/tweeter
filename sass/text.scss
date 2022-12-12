@@ -1,7 +1,17 @@
+$base-text-color: #545149;
+$base-color: #4056A1;
+$base-border-color: #545149;
+$base-text-color: #545149;
+$base-highlight-color: #d89820;
+$base-attention-color: #ef3c22;
+$base-muted-color: #c5cbe3;
+$light-bg-color: #f5f1ec;
+$light-text-color: #FFFFFF;
+
 section h2:first-child {
   margin-top: 0;
 }
 
 .danger {
-  color: #ef3c22;
+  color: $base-attention-color;
 }

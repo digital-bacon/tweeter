@@ -1,3 +1,13 @@
+$base-text-color: #545149;
+$base-color: #4056A1;
+$base-border-color: #545149;
+$base-text-color: #545149;
+$base-highlight-color: #d89820;
+$base-attention-color: #ef3c22;
+$base-muted-color: #c5cbe3;
+$light-bg-color: #f5f1ec;
+$light-text-color: #FFFFFF;
+
 .new-tweet form {
   display: flex;
   flex-direction: column;
@@ -6,12 +16,12 @@
 #tweet-text {
   background: transparent;
   border: none;
-  border-bottom: 4px solid #545149;
+  border-bottom: 4px solid $base-border-color;
   resize: none;
 }
 
 .new-tweet form label {
-  color: #545149;
+  color: $base-text-color;
   font-weight: 600;
 }
 
@@ -36,8 +46,8 @@
 }
 
 .new-tweet .actions-and-info button {
-  background-color: #4056A1;
-  color: #FFFFFF;
+  background-color: $base-color;
+  color: $light-text-color;
   border: none;
   padding: 0.25em 0.5em;
   cursor: pointer;
@@ -46,7 +56,7 @@
 }
 
 .new-tweet .actions-and-info button:hover {
-  background-color: #d89820;
+  background-color: $base-highlight-color;
 }
 
 .new-tweet .actions-and-info .counter {
@@ -54,8 +64,8 @@
 }
 
 .new-tweet .error {
-  border: 4px solid #ef3c22;
+  border: 4px solid $base-attention-color;
   border-radius: 3px;
   padding: 0.25em 1.5em;
-  color: #ef3c22;
+  color: $base-attention-color;
 }

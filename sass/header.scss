@@ -1,9 +1,19 @@
+$base-text-color: #545149;
+$base-color: #4056A1;
+$base-border-color: #545149;
+$base-text-color: #545149;
+$base-highlight-color: #d89820;
+$base-attention-color: #ef3c22;
+$base-muted-color: #c5cbe3;
+$light-bg-color: #f5f1ec;
+$light-text-color: #FFFFFF;
+
 #user-banner {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #d89820 url("https://www.transparenttextures.com/patterns/food.png");
+  background: $base-highlight-color url("https://www.transparenttextures.com/patterns/food.png");
   padding-top: 96px;
   height: 400px;
   width: 100%;
@@ -19,7 +29,7 @@
 
 #user-banner h2 {
   margin-top: 0;
-  color: white;
+  color: $light-text-color;
 }
 
 @media screen and (min-width: 1024px) {

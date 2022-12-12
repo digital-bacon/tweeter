@@ -1,77 +1,91 @@
+$base-text-color: #545149;
+$base-color: #4056A1;
+$base-border-color: #545149;
+$base-text-color: #545149;
+$base-highlight-color: #d89820;
+$base-attention-color: #ef3c22;
+$base-muted-color: #c5cbe3;
+$light-bg-color: #f5f1ec;
+$light-text-color: #FFFFFF;
+
 article.tweet {
   display: flex;
-  border: 4px solid #545149;
+  border: 4px solid $base-border-color;
   padding: 0.25em 1em;
   margin-bottom: 2em;
   flex-direction: column;
   overflow-wrap: break-word;
+
+  header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .user-image,
+    .user-name,
+    .user-handle {
+      display: block;
+    }
+
+    .user-image {
+      flex-grow: 0;
+      padding-right: 0.5em;
+      max-width: 2.5em;
+    }
+
+    .user-name {
+      flex-grow: 2;
+    }
+
+    .user-handle {
+      flex-grow: 1;
+      display: flex;
+      justify-content: flex-end;
+      font-weight: 600;
+      color: $base-muted-color;
+    }
+
+  }
+
+  p.content-text {
+    font-weight: 600;
+    padding: 0 24px;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5em;
+    border-top: 4px solid $base-border-color;
+    padding: 0 1em;
+
+    .tweet-age,
+    .actions {
+      font-size: 0.65em;
+      font-weight: 600;
+    }
+
+    .actions {
+      letter-spacing: 0.35em;
+      color: $base-color;
+
+      a {
+        color: $base-color;
+        transition: color 0.25s ease;
+      }
+
+      a:hover,
+      a:focus {
+        color: $base-highlight-color;
+      }
+
+    }
+
+  }
+
 }
 
 article.tweet:hover,
 article.tweet:focus {
-  box-shadow: 0.25em 0.25em #c5cbe3;
-}
-
-article.tweet header {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-article.tweet header .user-image,
-article.tweet header .user-name,
-article.tweet header .user-handle {
-  display: block;
-}
-
-article.tweet header .user-image {
-  flex-grow: 0;
-  padding-right: 0.5em;
-  max-width: 2.5em;
-}
-
-article.tweet header .user-name {
-  flex-grow: 2;
-}
-
-article.tweet header .user-handle {
-  flex-grow: 1;
-  display: flex;
-  justify-content: flex-end;
-  font-weight: 600;
-  color: #c5cbe3;
-}
-
-article.tweet p.content-text {
-  font-weight: 600;
-  padding: 0 24px;
-}
-
-article.tweet footer {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0.5em;
-  border-top: 4px solid #545149;
-  padding: 0 1em;
-}
-
-article.tweet footer .tweet-age,
-article.tweet footer .actions {
-  font-size: 0.65em;
-  font-weight: 600;
-}
-
-article.tweet footer .actions {
-  letter-spacing: 0.35em;
-  color: #4056A1;
-}
-
-article.tweet footer .actions a {
-  color: #4056A1;
-  transition: color 0.25s ease;
-}
-
-article.tweet footer .actions a:hover,
-article.tweet footer .actions a:focus {
-  color: #d89820;
+  box-shadow: 0.25em 0.25em $base-muted-color;
 }

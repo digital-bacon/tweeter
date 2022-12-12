@@ -21,13 +21,11 @@ body {
   align-items: center;
   font-family: "Source Sans Pro", sans-serif;
 }
-
-main {
+body main {
   width: 90vw;
   max-width: 90vw;
 }
-
-section {
+body section {
   padding: 1.5em 0;
 }
 
